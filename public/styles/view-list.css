@@ -1,0 +1,165 @@
+/* General page styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Ensure the container has a relative position */
+    min-height: 100vh; /* Ensure the body takes up full height */
+}
+
+/* Page container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* List item container */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Individual list item styles */
+li {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+/* List item image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* List item response code styles */
+p {
+    font-size: 16px;
+    color: #34495e;
+    margin-top: 10px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Back button */
+button.back-btn {
+    background-color: #2ecc71;
+    padding: 12px 25px;
+    font-size: 18px;
+    position: fixed; /* Positioning fixed at the bottom */
+    bottom: 30px; /* Spacing from bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
+}
+
+button.back-btn:hover {
+    background-color: #27ae60;
+}
+
+/* No items found message */
+p.no-items {
+    text-align: center;
+    font-size: 18px;
+    color: #e74c3c;
+}
+
+/* Responsive Design for mobile */
+@media (max-width: 768px) {
+    ul {
+        grid-template-columns: 1fr;
+    }
+
+    li {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Adjust the back button for mobile */
+    button.back-btn {
+        width: 100%; /* Make the button full width on small screens */
+        position: relative;
+        transform: unset;
+        left: unset;
+        margin-top: 40px;
+    }
+}
+
+/* Style for the Back to Saved Lists button */
+#backToSavedListsBtn {
+    position: absolute; /* Position the button absolutely relative to the page */
+    left: 50%; /* Place the button in the horizontal center */
+    bottom: 20px; /* Place the button 20px above the bottom of the page */
+    transform: translateX(-50%); /* Offset the button by 50% of its width for perfect centering */
+    background-color: #000000; /* Blue background color */
+    color: white; /* White text */
+    padding: 12px 25px; /* Add padding to make the button larger */
+    font-size: 18px; /* Set a larger font size */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth effects */
+}
+
+/* Hover effect */
+#backToSavedListsBtn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateX(-50%) translateY(-3px); /* Slightly move the button up */
+}
+
+/* Active effect when the button is clicked */
+#backToSavedListsBtn:active {
+    background-color: #004085; /* Even darker blue when clicked */
+    transform: translateX(-50%) translateY(1px); /* Move the button down slightly when clicked */
+}

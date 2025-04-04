@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saved Lists</title>
+    <link rel="stylesheet" href="/styles/lists.css">
+</head>
+<body>
+    <h1>Saved Lists</h1>
+
+    <% if (savedLists && savedLists.length > 0) { %>
+        <ul>
+            <% savedLists.forEach(function(list) { %>
+                <li>
+                    <h3><%= list.name %></h3>
+                    <p>Created at: <%= new Date(list.created_at).toLocaleString() %></p>
+                    <button onclick="viewList(<%= list.id %>)">View</button>
+                    <button onclick="editList(<%= list.id %>)">Edit</button>
+                    <button onclick="deleteList(<%= list.id %>)">Delete</button>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No saved lists found.</p>
+    <% } %>
+
+    <button id="backToSearchBtn" onclick="window.location.href='/search'">Back to Search</button>
+
+    <script>
+        function viewList(id) {
+            window.location.href = `/saved-lists/${id}`;
+        }
+
+        function editList(id) {
+            window.location.href = `/edit-list/${id}`;
+        }
+
+function deleteList(id) {
+    if (confirm("Are you sure you want to delete this list?")) {
+        fetch(`/delete-list/${id}`, {
+            method: "DELETE", // Ensure method is DELETE
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("List deleted successfully!");
+                location.reload(); // Refresh the page to reflect changes
+            } else {
+                alert("Failed to delete the list.");
+            }
+        })
+        .catch(error => {
+            console.error("Error deleting list:", error);
+            alert("An error occurred while deleting the list.");
+        });
+    }
+}
+
+        
+    </script>
+</body>
+</html>

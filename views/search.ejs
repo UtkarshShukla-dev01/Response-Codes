@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search HTTP Response Codes</title>
+    <link rel="stylesheet" href="/styles/search.css">
+</head>
+<body>
+    <h1>Search HTTP Response Codes</h1>
+
+    <form id="searchForm">
+        <input type="text" id="responseCode" placeholder="Enter Response Code (e.g., 200, 3xx, 20x)" required />
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Save List Button (initially hidden, only visible after search) -->
+    <div id="saveListBtnContainer" style="display: none;">
+        <button id="saveListBtn" onclick="saveList()">Save This List</button>
+    </div>
+    
+    <div id="results"></div>
+
+
+    <h2>Saved Searches</h2>
+    <div id="savedLists" style="display: none;"></div>
+
+    <button onclick="window.location.href='/lists'">View Saved Searches</button>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="/scripts/search.js"></script>
+</body>
+</html>

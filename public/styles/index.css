@@ -1,0 +1,89 @@
+/* index.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.company-name {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #007bff; /* MoEngage brand color */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin: 20px 0;
+}
+
+.button-group {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    .company-name {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

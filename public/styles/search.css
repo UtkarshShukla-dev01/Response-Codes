@@ -1,0 +1,180 @@
+/* General Styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: rgb(210, 139, 139);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+  font-size: 28px;
+  color: rgb(59, 0, 0);
+  margin-bottom: 20px;
+}
+
+/* Search Form */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff; /* Blue color when input is focused */
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005f73;
+}
+
+/* Save and View Saved Searches Section */
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#saveListBtn, #viewSavedBtn {
+  width: 45%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#saveListBtn:hover, #viewSavedBtn:hover {
+  background-color: #1d7d32;
+}
+
+/* Results Section */
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-container {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.image-container p {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Saved Searches Section */
+#savedLists {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#savedLists button {
+  padding: 12px 20px;
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#savedLists button:hover {
+  background-color: #e0a800;
+}
+/* Styling for the Save This List button */
+#saveListBtnContainer {
+    text-align: center; /* Center-align the button */
+    margin-top: 20px; /* Add some spacing above the button */
+}
+
+/* Styling for the Save This List button */
+#saveListBtnContainer {
+    text-align: center; /* Center-align the button */
+    margin-top: 10px; /* Add some spacing above the button */
+}
+
+#saveListBtn {
+    background-color: #272927; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 12px 25px; /* Add padding for a larger button */
+    font-size: 18px; /* Larger font for better readability */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+#saveListBtn:hover {
+    background-color: #45a049; /* Slightly darker green when hovered */
+    transform: translateY(-3px); /* Button moves slightly up when hovered */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Add a soft shadow effect */
+}
+
+/* Focus effect */
+#saveListBtn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add shadow for focus */
+}
+
+/* Active effect (when the button is pressed) */
+#saveListBtn:active {
+    background-color: #161b16; /* Even darker green when button is pressed */
+    transform: scale(0.98); /* Slightly shrink the button */
+    box-shadow: none; /* Remove shadow when active */
+}
